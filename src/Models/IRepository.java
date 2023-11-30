@@ -5,6 +5,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public interface IRepository {
-String repositoryPath = "../../Desktop/";
+String repositoryPath = "../../../Desktop/";
     ArrayList<File> search(Date startDate, Date endDate);
 }

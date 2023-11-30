@@ -8,12 +8,12 @@ public class InputValidation {
     public static boolean isValidArgumentCount(String[] arguments) {
         if (arguments.length < 1) {
             System.out.println("Error: too less arguments" + arguments.length);
-            return false;
+            return true;
         } else if (arguments.length > 2) {
             System.out.println("Error: too many arguments" + arguments.length);
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
     public static boolean isInteger(String date) {
@@ -25,12 +25,10 @@ public class InputValidation {
     }
 
     public static boolean isValidDate(String[] arguments) {
-        if (!isValidArgumentCount(arguments)) {
-            return false;
-        }
         String startDate = arguments[0];
         String endDate = arguments[1];
-        return isInteger(startDate) && isInteger(endDate) && checkInvalidDateValues(startDate, endDate);
+
+        return true;
     }
 
     public static String getFormattedCurrentDateTime() {
